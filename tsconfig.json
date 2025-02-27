@@ -2,7 +2,9 @@
   "extends": "ts-config-single-spa",
   "files": ["src/titanco-root-config.ts"],
   "compilerOptions": {
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
