@@ -12,4 +12,3 @@ pnpm dlx create-single-spa --moduleType root-config
 ## Extending the root application
 
 Adding New Microfrontends to Single-Spa Layout
-

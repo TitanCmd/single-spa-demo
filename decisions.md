@@ -1,27 +1,19 @@
-# Key decisions register
+# Key architectural decision register
+
+Moved to a monorepo type structure.
+Originally this was the repo just for the root-app and I was going to have the repo's separate as you typically would in a single-spa microfrontend setup, but with time constraints and ease of sharing I opted for monorepo type structure.
+
+Each folder in packages/** is a separate microfrontend.
+
+Normally with separate repo's you get separate deploys easily through CI/CD on each repo, plus no pollution of PR's etc.
 
 ## Frontend framework
 
 - Vue ✅
 - React ❌
+- Svelte ❌
 
-Vue chosen for speed and developer experience
-
-## Setup
-
-pnpm dlx create-single-spa --moduleType root-config
-
-using single-spa Layout engine: Yes
-
-- Speed and declarative routing
-- Easier scaling
-- Better DX, not needing to manually mount and unmount micro-frontends
-- Works well with vue
-
-## Microfrontend layout
-
-- Single-spa layout engine
-- Layout file: `src/microfrontend-layout.html`
+Vue chosen for speed and my experience
 
 ## DX Environment
 
