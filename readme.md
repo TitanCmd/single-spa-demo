@@ -49,6 +49,7 @@ single-spa-demo/
 │   └── microfrontends/
 │       └── titanco-navigation/   # Navigation component microfrontend
 ├── ARCHITECTURE.md               # Architectural decisions documentation
+├── ARCHITECTURE_DIAGRAMS.md      # Visual diagrams of the microfrontend and monorepo structure
 ├── DEVELOPMENT.md                # Development workflow and setup instructions
 └── README.md                     # This file
 ```
@@ -56,6 +57,7 @@ single-spa-demo/
 ## Documentation
 
 - [Architecture](./ARCHITECTURE.md) - Architectural decisions and patterns
+- [Architecture Diagrams](./ARCHITECTURE_DIAGRAMS.md) - Visual diagrams of the microfrontend and monorepo structure
 - [Development](./DEVELOPMENT.md) - Development workflow and setup instructions
 
 ## Microfrontends
