@@ -66,18 +66,50 @@ After creating a new microfrontend, you need to integrate it with the root appli
 
 ## Development Workflow
 
+### Streamlined Workflow (Recommended)
+
+From the root directory, you can use the following commands to manage all microfrontends at once:
+
+```bash
+# Install dependencies for all packages
+pnpm setup
+
+# Start all applications (root app and microfrontends)
+pnpm start
+
+# Build all applications
+pnpm build
+
+# Test all applications
+pnpm test
+
+# Lint all code
+pnpm lint
+
+# Format all code
+pnpm format
+```
+
+### Individual Package Workflow
+
+If you need to work on specific packages individually:
+
 1. **Start the Root Application**
 
    ```bash
+   pnpm --filter @titanco/root-config start
+   # or
    cd packages/shell/titanco-root-app
    pnpm start
    ```
 
-2. **Start Your Microfrontend**
+2. **Start a Specific Microfrontend**
 
    ```bash
-   cd packages/microfrontends/your-microfrontend
-   pnpm serve
+   pnpm --filter @titanco/titanco-navigation serve:standalone
+   # or
+   cd packages/microfrontends/titanco-navigation
+   pnpm serve:standalone
    ```
 
 3. **Access the Application**
@@ -94,14 +126,21 @@ This project uses:
 To lint and format your code:
 
 ```bash
-pnpm run lint
+# Lint all packages
+pnpm lint
+
+# Format all packages
+pnpm format
 ```
 
 ## Testing
 
-Each microfrontend should include its own tests. Run tests with:
+Each microfrontend includes its own tests. Run tests with:
 
 ```bash
-cd packages/microfrontends/your-microfrontend
-pnpm test:unit
+# Test all packages
+pnpm test
+
+# Test a specific package
+pnpm --filter @titanco/titanco-navigation test:unit
 ```
