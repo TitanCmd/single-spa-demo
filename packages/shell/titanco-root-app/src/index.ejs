@@ -14,12 +14,11 @@
   <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
 
   <!-- Shared dependencies go into this import map -->
-  <!-- TODO: Add shared dependency for vue -->
-  <!-- "vue": "https://ga.jspm.io/npm:vue@3.5.13/dist/vue.runtime.esm-browser.js" -->
   <script type="injector-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.esm-browser.js"
       }
     }
   </script>
@@ -33,7 +32,7 @@
     {
       "imports": {
         "@titanco/root-config": "//localhost:9000/titanco-root-config.js",
-        "@titanco/navigation": "//localhost:8080/titanco-navigation"
+        "@titanco/titanco-navigation": "//localhost:8080/js/app.js"
       }
     }
   </script>
@@ -52,7 +51,7 @@
   <script>
     window.importMapInjector.initPromise.then(() => {
       import('@titanco/root-config');
-      import('@titanco/navigation');
+      import('@titanco/titanco-navigation');
     });
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
